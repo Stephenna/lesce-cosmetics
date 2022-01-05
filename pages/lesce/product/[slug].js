@@ -24,6 +24,7 @@ const Product = ({ product }) => {
   useEffect(() => {
     product.map( product => {
       setSubImages(product.subImages);
+
       setRightTag(product.tags[0])
       setLeftTag(product.tags[1])
     });
