@@ -26,12 +26,12 @@ const ImageDisplay = ({ subImages}) => {
         <div className="sub-images">
           {subImages.map((img) => (
             <button
-              key={img.id}
+              key={img.url}
               onClick={() => {
                 setImageSelected(img.url);
               }}
             >
-              <div className="img" key={img.id}>
+              <div className="img" key={img.url}>
                 <SelectedImage
                   sub={img.url}
                   width={100}

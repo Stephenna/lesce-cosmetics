@@ -4,7 +4,7 @@ import CartReviewIngredients from "./Add-Rev-Ingr/CartReviewIngredients";
 const ItemDescription = ({ product }) => {
   
   const { 0: data } = product;
-  console.log(data.price)
+  
   
 
   return (
@@ -18,10 +18,11 @@ const ItemDescription = ({ product }) => {
         <h2 className="desc">{data.description}</h2>
       </div>
       <div className="item-subDesc">
-        {data.subDescription.map((arr) => (
-          <>
-            <h3 className="subDesc">{bullet(arr)}</h3>
-          </>
+        {data.subDescription.map((arr, i) => (
+          <div key={i}>
+            <h3 className="subDesc" key={i}>{bullet(arr)}</h3>
+          </div>
+        
         ))}
       </div>
       <div className="selectors">

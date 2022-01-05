@@ -25,7 +25,7 @@ const LeftNav = ({ background, text, words, index }) => {
       {displayLink && (
         <h1 className="left-text" style={text}>
           <Link href={i} passHref>
-            <a style={{fontSize: 64,}}>{words}</a>
+            <a style={text} className="shop">{words}</a>
           </Link>
         </h1>
       )}

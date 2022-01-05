@@ -27,7 +27,7 @@ const FaceCard = () => {
           Our products are made for you, not animals. If we have to test on
           animals to ensure its safe for you skin, it probably wasnt a good idea
           from the jump. We use clean ingredients to keep you happy and animals
-          safe
+          safe.
         </p>
       </div>
     </div>

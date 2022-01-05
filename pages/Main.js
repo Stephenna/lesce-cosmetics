@@ -15,7 +15,6 @@ import { useState } from "react";
 
 const Main = () => {
 
-  const [itemizedCart, setItemizedCart] = useState([])
 
   return (
     <div className="container main">

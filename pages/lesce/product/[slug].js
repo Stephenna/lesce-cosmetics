@@ -20,10 +20,10 @@ const Product = ({ product }) => {
   const [subImages, setSubImages] = useState([])
   const [leftTag, setLeftTag] = useState('');
   const [rightTag, setRightTag] = useState('');
+
   useEffect(() => {
     product.map( product => {
       setSubImages(product.subImages);
-      console.log(product.tags[0])
       setRightTag(product.tags[0])
       setLeftTag(product.tags[1])
     });
@@ -48,7 +48,7 @@ const Product = ({ product }) => {
         left={"LESCE"}
         center={rightTag.toUpperCase()}
         right={"🛒"}
-        blah={'blahhhhb'}
+        
       />
     </div>
   );

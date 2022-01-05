@@ -5,6 +5,9 @@ import RightNav from "../../components/NavBars/RightNav";
 import LeftNav from "../../components/NavBars/LeftNav";
 import Fade from "react-reveal/Fade";
 import FaceCard from "../../components/Info-Cards/FaceCard";
+import BodyCard from "../../components/Info-Cards/BodyCard";
+import OnSale from "../../components/Info-Cards/OnSale";
+import Tools from "../../components/Info-Cards/Tools";
 import {
   rBackground,
   rText,
@@ -22,11 +25,33 @@ import {
 const SingleCategory = ({ categories }) => {
   const [products, setProducts] = useState([]);
 
+  // const card = ['<FaceCard />', ]
+  const {0 : data} = categories
+  
   useEffect(() => {
     categories.map((cats) => {
       setProducts(cats.products);
     });
   });
+
+  const cards = () => {
+    switch(data.title) {
+      case "Face" : 
+       return <FaceCard />;
+      break;
+      case "Body" : 
+      return <BodyCard />
+      break;
+      case "On Sale" : 
+      return <OnSale />
+      break;
+      case "TOOLS" : 
+      return <Tools />
+      break;
+       default:
+         break;
+    }
+  }
 
   return (
     <div className="categories">
@@ -37,7 +62,7 @@ const SingleCategory = ({ categories }) => {
           words={"PRODUCTS"}
           index={1}
         />
-        <FaceCard />
+        {cards()}
       </div>
       <div className="list-of-products">
         <div className="wtf">
