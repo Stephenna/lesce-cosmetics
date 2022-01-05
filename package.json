@@ -6,11 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "heroku-postbuild": "next build",
     "lint": "next lint"
   },
   "engines": {
-    "node": "16.3.0"
+    "node": "14.16.0"
   },
   "dependencies": {
     "@apollo/client": "^3.5.6",
