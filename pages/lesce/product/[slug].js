@@ -61,7 +61,7 @@ export const getServerSideProps = async (pageContext) => {
   const url = process.env.URL;
   const GraphQL = new GraphQLClient(url, {
     headers: {
-      Authorization:` Bearer ${process.env.GRAPH_CMS_TOKEN}`,
+      Authorization: 'Bearer'  + process.env.GRAPH_CMS_TOKEN,
     },
   });
 
