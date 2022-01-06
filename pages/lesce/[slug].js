@@ -8,6 +8,8 @@ import FaceCard from "../../components/Info-Cards/FaceCard";
 import BodyCard from "../../components/Info-Cards/BodyCard";
 import OnSale from "../../components/Info-Cards/OnSale";
 import Tools from "../../components/Info-Cards/Tools";
+import dotenv from "dotenv"
+dotenv.config();
 import {
   rBackground,
   rText,
@@ -146,7 +148,7 @@ export const getServerSideProps = async (pageContext) => {
   const url = process.env.URL;
   const GraphQL = new GraphQLClient(url, {
     headers: {
-      Authorization: 'Bearer'  + process.env.GRAPH_CMS_TOKEN,
+      Authorization: 'Bearer' + process.env.GRAPH_CMS_TOKEN,
     },
   });
 

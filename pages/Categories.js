@@ -7,8 +7,8 @@ import {rBackground, rText, lText, lBackground, whiteCart} from "../components/N
 import { smallBorder, largeBorder, small, large,} from "../components/Category-Component/categoryCSS";
 import { gql, GraphQLClient } from "graphql-request";
 import { useState } from "react";
-useState
-
+import dotenv from "dotenv"
+dotenv.config();
 
 const Categories = ({ categories }) => {
   const [addedToCart, setAddedToCart] = useState([])
@@ -73,7 +73,7 @@ export const getStaticProps = async () => {
   const url = process.env.URL;
   const GraphQL = new GraphQLClient(url, {
     headers: {
-      Authorization: 'Bearer'  + process.env.GRAPH_CMS_TOKEN,
+      Authorization: 'Bearer' + process.env.GRAPH_CMS_TOKEN,
     },
   });
 

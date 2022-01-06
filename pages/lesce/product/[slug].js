@@ -9,7 +9,8 @@ import {
 import { lText, rText } from "../../../components/NavBars/BlackStyling";
 import ImageDisplay from "../../../components/Item-details/ImageDisplay";
 import ItemDescription from "../../../components/Item-details/ItemDescription";
-
+import dotenv from "dotenv"
+dotenv.config();
 
 
 
@@ -61,7 +62,7 @@ export const getServerSideProps = async (pageContext) => {
   const url = process.env.URL;
   const GraphQL = new GraphQLClient(url, {
     headers: {
-      Authorization: 'Bearer'  + process.env.GRAPH_CMS_TOKEN,
+      Authorization: 'Bearer' + process.env.GRAPH_CMS_TOKEN,
     },
   });
 
